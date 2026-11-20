@@ -17,6 +17,7 @@ M.plugins = {
   ["lazy.nvim"] = "lazy",
   ["leap.nvim"] = "leap",
   ["mini.nvim"] = "mini",
+  ["mini.pick"] = "mini",
   ["neo-tree.nvim"] = "neotree",
   ["nvim-treesitter-context"] = "treesitter_context",
   ["render-markdown.nvim"] = "render_markdown",

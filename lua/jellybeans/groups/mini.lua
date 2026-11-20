@@ -9,7 +9,14 @@ function M.get(c, opts)
   local replace_bg = is_mono and c.boulder or c.raw_sienna
   local command_bg = is_mono and c.silver or c.biloba_flower
 
+  local picker_bg = opts.transparent and "NONE" or c.background
+
   return {
+    -- Mini.pick
+    MiniPickNormal = { fg = c.foreground, bg = picker_bg },
+    MiniPickBorder = { fg = opts.flat_ui and c.background or c.float_border, bg = picker_bg },
+    MiniPickBorderText = { fg = c.biloba_flower, bg = picker_bg, bold = opts.bold },
+
     -- Mini.statusline
     MiniStatuslineModeNormal = { fg = c.total_black, bg = normal_bg, bold = opts.bold },
     MiniStatuslineModeInsert = { fg = c.total_black, bg = insert_bg, bold = opts.bold },
